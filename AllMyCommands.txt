@@ -141,3 +141,13 @@ Your branch is ahead of 'origin/master' by 1 commit.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git add AllMyCommands.txt
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git commit -m "AllMyComands added"
+[master b448d13] AllMyComands added
+ 1 file changed, 143 insertions(+)
+ create mode 100644 AllMyCommands.txt
+
