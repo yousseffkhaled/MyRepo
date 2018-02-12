@@ -1,0 +1,143 @@
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections
+$ git init
+Initialized empty Git repository in C:/Users/youssef/Desktop/SE sections/.git/
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git add .
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git commit -m "3 files added"
+[master (root-commit) 5e0f8a3] 3 files added
+ 3 files changed, 187 insertions(+)
+ create mode 100644 1.1.txt
+ create mode 100644 3.1.txt
+ create mode 100644 5.1.txt
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git remote add origin https://github.com/yousseffkhaled/MyRepo.git
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git rm "3.1.txt"
+rm '3.1.txt'
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git commit -m "section 3.1 deleted"
+[master 7118b10] section 3.1 deleted
+ 1 file changed, 100 deletions(-)
+ delete mode 100644 3.1.txt
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git log
+commit 7118b10c454d9a927dd7349ff9f74566934bd394 (HEAD -> master)
+Author: yousseffkhaled <youssef.khaled@student.guc.edu.eg>
+Date:   Sun Feb 11 18:51:01 2018 +0200
+
+    section 3.1 deleted
+
+commit 5e0f8a39d495737c778c856b229d3b870ac2066f
+Author: yousseffkhaled <youssef.khaled@student.guc.edu.eg>
+Date:   Sun Feb 11 18:05:06 2018 +0200
+
+    3 files added
+git revert 7118b10c454d9a927dd
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   3.1.txt
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git commit -m "section 3.1 reverted"
+[master a6e6533] section 3.1 reverted
+ 1 file changed, 100 insertions(+)
+ create mode 100644 3.1.txt
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git push -u origin master
+Counting objects: 8, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 8.25 KiB | 2.75 MiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/yousseffkhaled/MyRepo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ touch README.md
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git commit -m "README.md created"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+        README.md
+
+nothing added to commit but untracked files present
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git branch ReadMe
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git commit -m "branch ReadMe created"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+        README.md
+
+nothing added to commit but untracked files present
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git checkout ReadMe
+Switched to branch 'ReadMe'
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (ReadMe)
+$ git commit -m " ReadMe switched to a branch"
+On branch ReadMe
+Untracked files:
+        README.md
+
+nothing added to commit but untracked files present
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (ReadMe)
+$ git add README.md
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (ReadMe)
+$ git commit -m " README.md added to ReadMe"
+[ReadMe 8dde672]  README.md added to ReadMe
+ 1 file changed, 8 insertions(+)
+ create mode 100644 README.md
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (ReadMe)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git commit -m " switched back to master"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git merge ReadMe
+Updating a6e6533..8dde672
+Fast-forward
+ README.md | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+ create mode 100644 README.md
+
+youssef@DESKTOP-T376R5T MINGW64 ~/Desktop/SE sections (master)
+$ git commit -m " ReadMe merged with master"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
