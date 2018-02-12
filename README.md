@@ -1,6 +1,6 @@
 Project Title (Sprint0).
  
-Getting Started (explanation of content in reop).
+Getting Started (learning how to use github by having in the repository  3 files and adding and deleting them then publishing it  ).
 
 Author (Youssef Khaled , 37-2598).
 
